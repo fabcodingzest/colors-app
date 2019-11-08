@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import Palette from "./Palette";
 import seedColors from "./seedColors";
+import ColorBox from "./ColorBox";
 // import seedColors from "./seedColors";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Palette {...seedColors[4]} />
+        <Palette {...seedColors[2]} />
       </div>
     );
   }

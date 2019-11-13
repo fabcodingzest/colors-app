@@ -5,7 +5,6 @@ import PaletteFooter from "./PaletteFooter";
 import { Link } from "react-router-dom";
 import styles from "./styles/PaletteStyles";
 import { withStyles } from "@material-ui/core/styles";
-import "./Palette.css";
 
 class SingleColorPalette extends Component {
   constructor(props) {

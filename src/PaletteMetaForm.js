@@ -13,10 +13,6 @@ function PaletteMetaForm(props) {
   const [stage, setStage] = React.useState("form");
   const [newPaletteName, setNewName] = React.useState("");
 
-  const handleClose = () => {
-    setStage(false);
-  };
-
   React.useEffect(() => {
     ValidatorForm.addValidationRule("isPaletteNameUnique", value => {
       const palette = props.palettes;

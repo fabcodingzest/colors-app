@@ -1,4 +1,4 @@
-export default {
+const styles = {
   root: {
     backgroundColor: "white",
     borderRadius: "5px",
@@ -40,7 +40,6 @@ export default {
     margin: "0 auto",
     marginBottom: "-4px"
   },
-  delete: {},
   deleteIcon: {
     color: "white",
     backgroundColor: "#eb3d30",
@@ -54,3 +53,5 @@ export default {
     opacity: 0
   }
 };
+
+export default styles;

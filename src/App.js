@@ -6,6 +6,7 @@ import seedColors from "./seedColors";
 import NewPaletteForms from "./NewPaletteForm";
 import { generatePalette } from "./colorHelpers";
 import SingleColorPalette from "./SingleColorPalette";
+import { palette } from "@material-ui/system";
 
 class App extends Component {
   constructor(props) {
@@ -14,12 +15,19 @@ class App extends Component {
     this.state = { palette: savedPalettes || seedColors };
     this.savePalette = this.savePalette.bind(this);
     this.findPalette = this.findPalette.bind(this);
+    this.deletePalette = this.deletePalette.bind(this);
   }
 
   findPalette(id) {
     return this.state.palette.find(function(palette) {
       return palette.id === id;
     });
+  }
+  deletePalette(id) {
+    this.setState(
+      st => ({ palette: st.palette.filter(palette => palette.id !== id) }),
+      this.syncLocalStorage
+    );
   }
   savePalette(newPalette) {
     this.setState(
@@ -62,7 +70,11 @@ class App extends Component {
           exact
           path="/"
           render={routeProps => (
-            <PaletteList palettes={this.state.palette} {...routeProps} />
+            <PaletteList
+              palettes={this.state.palette}
+              deletePalette={this.deletePalette}
+              {...routeProps}
+            />
           )}
         />
         <Route

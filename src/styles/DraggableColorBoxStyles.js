@@ -1,5 +1,3 @@
-import { style } from "@material-ui/system";
-
 const styles = {
   root: {
     width: "20%",

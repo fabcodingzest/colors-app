@@ -10,7 +10,8 @@ import SingleColorPalette from "./SingleColorPalette";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { palette: seedColors };
+    const savedPalettes = JSON.parse(window.localStorage.getItem("palette"));
+    this.state = { palette: savedPalettes || seedColors };
     this.savePalette = this.savePalette.bind(this);
     this.findPalette = this.findPalette.bind(this);
   }
@@ -21,7 +22,14 @@ class App extends Component {
     });
   }
   savePalette(newPalette) {
-    this.setState({ palette: [...this.state.palette, newPalette] });
+    this.setState(
+      { palette: [...this.state.palette, newPalette] },
+      this.syncLocalStorage
+    );
+  }
+  syncLocalStorage() {
+    //save palettes to local storage
+    window.localStorage.setItem("palette", JSON.stringify(this.state.palette));
   }
   render() {
     return (

@@ -18,7 +18,13 @@ class ColorPickerForm extends Component {
   }
 
   updateCurrentColor(newColor) {
-    this.setState({ currentColor: newColor.hex });
+    const r = newColor.rgb.r;
+    const g = newColor.rgb.g;
+    const b = newColor.rgb.b;
+    const a = newColor.rgb.a;
+    const rgbaColor = `rgba(${r},${g},${b},${a})`;
+
+    this.setState({ currentColor: rgbaColor });
   }
   handleChange(evt) {
     this.setState({

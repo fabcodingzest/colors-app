@@ -19,23 +19,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: "flex"
   },
-  appBar: {
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
+
   hide: {
     display: "none"
   },
@@ -76,9 +60,7 @@ function NewPaletteForm(props) {
   const { maxColors = 20 } = props;
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  // const [currentColor, setColor] = React.useState("teal");
   const [colors, setNewColor] = React.useState(props.palettes[0].colors);
-  // const [newPaletteName, setPaletteName] = React.useState("");
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -126,7 +108,6 @@ function NewPaletteForm(props) {
     <div className={classes.root}>
       <PaletteFormNav
         open={open}
-        classes={classes}
         palettes={props.palettes}
         handleSubmit={handleSubmit}
         handleDrawerOpen={handleDrawerOpen}

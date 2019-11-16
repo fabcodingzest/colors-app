@@ -2,7 +2,7 @@
   "name": "colors-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/fabcodingzest/colors-app",
+  "homepage": "https://github.com/fabcodingzest/colors-app/",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",

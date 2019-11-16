@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DraggableColorList from "./DraggableColorList";
 import { Button } from "@material-ui/core";
-import { arrayMove } from "react-sortable-hoc";
+import { arrayMove } from "array-move";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/NewPaletteFormStyle";
 

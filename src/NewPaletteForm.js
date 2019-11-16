@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DraggableColorList from "./DraggableColorList";
 import { Button } from "@material-ui/core";
-import { arrayMove } from "array-move";
+import arrayMove from "array-move";
 import { withStyles } from "@material-ui/styles";
 import styles from "./styles/NewPaletteFormStyle";
 
@@ -122,6 +122,7 @@ function NewPaletteForm(props) {
           deleteColor={deleteColor}
           axis="xy"
           onSortEnd={onSortEnd}
+          distance={20}
         />
       </main>
     </div>

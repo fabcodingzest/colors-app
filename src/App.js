@@ -6,7 +6,6 @@ import seedColors from "./seedColors";
 import NewPaletteForms from "./NewPaletteForm";
 import { generatePalette } from "./colorHelpers";
 import SingleColorPalette from "./SingleColorPalette";
-import { palette } from "@material-ui/system";
 
 class App extends Component {
   constructor(props) {

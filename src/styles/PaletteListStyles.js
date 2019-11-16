@@ -2,6 +2,15 @@ import sizes from "./sizes";
 import background from "./background.svg";
 
 export default {
+  "@global": {
+    ".fade-exit": {
+      opacity: 1
+    },
+    ".fade-exit-active": {
+      opacity: 0,
+      transition: "opacity 500ms ease-out"
+    }
+  },
   root: {
     /* background by SVGBackgrounds.com */
     backgroundColor: "#1a18aa",

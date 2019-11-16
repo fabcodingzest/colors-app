@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a80e2bc277e4910effa13ef80bf95e3a",
+    "revision": "7c5df7fea27c35f1c8ad91b8c761bd3b",
     "url": "/fabcodingzest/colors-app/index.html"
   },
   {
-    "revision": "587e51ca5eb1a28eb733",
+    "revision": "f1eb2a9622c4a78969eb",
     "url": "/fabcodingzest/colors-app/static/css/2.292c8731.chunk.css"
   },
   {
-    "revision": "c9ad5c0a51adab441991",
+    "revision": "05b0bc582d1ddb9cbe3c",
     "url": "/fabcodingzest/colors-app/static/css/main.3ddea50d.chunk.css"
   },
   {
-    "revision": "587e51ca5eb1a28eb733",
-    "url": "/fabcodingzest/colors-app/static/js/2.c4ab20c5.chunk.js"
+    "revision": "f1eb2a9622c4a78969eb",
+    "url": "/fabcodingzest/colors-app/static/js/2.108c3f25.chunk.js"
   },
   {
-    "revision": "c9ad5c0a51adab441991",
-    "url": "/fabcodingzest/colors-app/static/js/main.c2dd5717.chunk.js"
+    "revision": "05b0bc582d1ddb9cbe3c",
+    "url": "/fabcodingzest/colors-app/static/js/main.5e47d2f0.chunk.js"
   },
   {
     "revision": "19e84cdf803b94385595",

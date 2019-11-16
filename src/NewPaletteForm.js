@@ -9,14 +9,15 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DraggableColorList from "./DraggableColorList";
 import { Button } from "@material-ui/core";
-import { arrayMove } from "react-sortable-hoc";
+import arrayMove from "array-move";
 import styles from "./styles/NewPaletteFormStyle";
+import seedColors from "./seedColors";
 
 function NewPaletteForm(props) {
   const { maxColors = 20 } = props;
   const classes = styles();
   const [open, setOpen] = React.useState(false);
-  const [colors, setNewColor] = React.useState(props.palettes[0].colors);
+  const [colors, setNewColor] = React.useState(seedColors[0].colors);
 
   const handleDrawerOpen = () => {
     setOpen(true);

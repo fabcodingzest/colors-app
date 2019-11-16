@@ -41,7 +41,6 @@ function NewPaletteForm(props) {
     setNewColor([]);
   };
   const addRandomColor = () => {
-    //pick random color from existing palettes
     const allColors = props.palettes.map(p => p.colors).flat();
     let rand = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[rand];

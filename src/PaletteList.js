@@ -11,10 +11,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import CheckIcon from "@material-ui/icons/Check";
 import CheckClose from "@material-ui/icons/Close";
 import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles/PaletteListStyles";
-import blue from "@material-ui/core/colors/blue";
-import red from "@material-ui/core/colors/red";
 import MiniPalette from "./MiniPalette";
+import red from "@material-ui/core/colors/red";
+import blue from "@material-ui/core/colors/blue";
+import styles from "./styles/PaletteListStyles";
 
 class PaletteList extends Component {
   constructor(props) {

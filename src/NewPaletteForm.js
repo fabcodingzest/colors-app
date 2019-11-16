@@ -9,8 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DraggableColorList from "./DraggableColorList";
 import { Button } from "@material-ui/core";
-import arrayMove from "array-move";
-import { withStyles } from "@material-ui/styles";
+import { arrayMove } from "react-sortable-hoc";
 import styles from "./styles/NewPaletteFormStyle";
 
 function NewPaletteForm(props) {
@@ -30,21 +29,14 @@ function NewPaletteForm(props) {
   const addNewColor = newColor => {
     setNewColor(oldColors => [...oldColors, newColor]);
   };
-
-  const handleSubmit = newPalette => {
-    newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, "-");
-    newPalette.colors = colors;
-    props.savePalette(newPalette);
-    props.history.push("/");
+  const onSortEnd = ({ oldIndex, newIndex }) => {
+    setNewColor(arrayMove(colors, oldIndex, newIndex));
   };
 
   const deleteColor = colorName => {
     setNewColor(colors.filter(color => color.name !== colorName));
   };
 
-  const onSortEnd = ({ oldIndex, newIndex }) => {
-    setNewColor(arrayMove(colors, oldIndex, newIndex));
-  };
   const clearColors = () => {
     setNewColor([]);
   };
@@ -57,6 +49,12 @@ function NewPaletteForm(props) {
     console.log(allColors);
   };
   const paletteIsFull = colors.length >= maxColors;
+  const handleSubmit = newPalette => {
+    newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, "-");
+    newPalette.colors = colors;
+    props.savePalette(newPalette);
+    props.history.push("/");
+  };
 
   return (
     <div className={classes.root}>
@@ -129,4 +127,4 @@ function NewPaletteForm(props) {
   );
 }
 
-export default withStyles(styles)(NewPaletteForm);
+export default NewPaletteForm;

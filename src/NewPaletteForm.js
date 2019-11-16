@@ -42,11 +42,17 @@ function NewPaletteForm(props) {
     setNewColor([]);
   };
   const addRandomColor = () => {
-    const allColors = props.palettes.map(p => p.colors).flat();
+    const allColors =
+      props.palettes.length === 0
+        ? seedColors.map(p => p.colors).flat()
+        : props.palettes.map(p => p.colors).flat();
     let rand = Math.floor(Math.random() * allColors.length);
-    const randomColor = allColors[rand];
+    let randomColor = allColors[rand];
+    let isDuplicateColor = true;
+    while (isDuplicateColor) {
+      isDuplicateColor = colors.some(color => color.name === randomColor.name);
+    }
     setNewColor([...colors, randomColor]);
-    console.log(allColors);
   };
   const paletteIsFull = colors.length >= maxColors;
   const handleSubmit = newPalette => {

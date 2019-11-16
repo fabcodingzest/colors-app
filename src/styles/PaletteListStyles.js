@@ -30,7 +30,7 @@ export default {
     alignItems: "flex-start",
     flexDirection: "column",
     [sizes.down("xl")]: {
-      width: "80%",
+      width: "7 0%",
       height: "20%"
     },
     [sizes.down("xs")]: {

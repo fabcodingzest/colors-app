@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   picker: {
     width: "100% !important",
@@ -7,7 +9,10 @@ const styles = {
     width: "100%",
     padding: "1rem",
     marginTop: "1rem",
-    fontSize: "2rem"
+    fontSize: "2rem",
+    [sizes.down("sm")]: {
+      padding: ".4rem"
+    }
   },
   colorNameInput: {
     width: "100%",

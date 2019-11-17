@@ -30,8 +30,8 @@ const styles = {
   boxContent: {
     position: "absolute",
     padding: "10px",
-    width: "100%",
-    left: "0",
+    width: "95%",
+    left: "0px",
     bottom: "0px",
     letterSpacing: "1px",
     textTransform: "uppercase",
@@ -41,7 +41,10 @@ const styles = {
     color: props =>
       chroma(props.color).luminance() <= 0.08
         ? "rgba(255,255,255,0.8)"
-        : "rgba(0,0,0,0.6)"
+        : "rgba(0,0,0,0.6)",
+    [sizes.down("sm")]: {
+      alignItems: "center"
+    }
   },
   deleteIcon: {
     transition: "all 0.3s ease-in-out"

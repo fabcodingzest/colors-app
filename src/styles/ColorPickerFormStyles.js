@@ -11,7 +11,8 @@ const styles = {
     marginTop: "1rem",
     fontSize: "2rem",
     [sizes.down("sm")]: {
-      padding: ".4rem"
+      padding: "0.4rem",
+      marginTop: "0.4rem"
     }
   },
   colorNameInput: {

@@ -13,7 +13,11 @@ export default {
   Palette: {
     height: "100vh",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    scrollBehavior: "smooth",
+    [sizes.down("sm")]: {
+      height: "700px"
+    }
   },
   PaletteColor: {
     height: "90%"

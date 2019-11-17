@@ -59,7 +59,8 @@ export default {
     },
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1, 100%)",
-      gridGap: "1.4rem"
+      gridGap: "1.4rem",
+      marginBottom: "70px"
     }
   }
 };

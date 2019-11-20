@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import sizes from "./sizes";
 
 import { DRAWER_WIDTH } from "../Constants";
 
@@ -27,11 +28,14 @@ const styles = makeStyles(theme => ({
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
-    width: "100%"
+    width: "100%",
+    [sizes.down("xs")]: {
+      padding: 0
+    }
   },
   content: {
     flexGrow: 1,
-    height: "calc(100vh - 64px)",
+    height: "100vh",
     padding: 0,
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,

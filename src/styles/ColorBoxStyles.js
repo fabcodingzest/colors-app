@@ -74,6 +74,7 @@ export default {
     opacity: 0
   },
   boxContent: {
+    boxSizing: "border-box",
     position: "absolute",
     padding: "10px",
     width: "100%",
